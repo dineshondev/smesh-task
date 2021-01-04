@@ -1,5 +1,4 @@
 class=Task {
-
   @field=title {
     trait:derived,heading2;
     type: String;
