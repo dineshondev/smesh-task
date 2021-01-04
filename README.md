@@ -5,6 +5,10 @@
 logic which most likely would be part of the library but for demonstration purposes we are exposing some of the details here
  and `Object Styles Sheets` that glues everything together.
   
+  
+## Demo App  
+https://ngx-metaui.github.io/smesh-task/demo/home?module=Home
+
 
 ## Features
 
