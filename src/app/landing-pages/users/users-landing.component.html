@@ -1,0 +1,39 @@
+<div class="row center-xs">
+  <div class="col-xs-8">
+    <h1>Users</h1>
+    <fd-input-group [placement]="'after'" [glyph]="'search'" [placeholder]="'Search ...'">
+    </fd-input-group>
+  </div>
+</div>
+
+
+<div class="row center-xs">
+  <div class="col-xs-8">
+    <table fd-table>
+      <thead fd-table-header>
+      <tr fd-table-row>
+        <th fd-table-cell><input type="checkbox"/>
+        </th>
+        <th fd-table-cell>Name</th>
+        <th fd-table-cell>Username</th>
+        <th fd-table-cell>Roles</th>
+        <th fd-table-cell>Phone</th>
+      </tr>
+      </thead>
+      <tbody fd-table-body>
+      <tr *ngFor="let row of tableRows; let i = index" fd-table-row>
+        <td fd-table-cell>
+          <input type="checkbox" [checked]="row.checked"/>
+        </td>
+        <td fd-table-cell>{{row.name}}</td>
+        <td fd-table-cell>{{row.username}}</td>
+        <td fd-table-cell>{{row.roles}}</td>
+        <td fd-table-cell>{{row.phone}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+

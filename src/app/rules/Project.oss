@@ -1,0 +1,13 @@
+class=Project {
+
+  field=uniqueName {
+    label:"Id";
+  }
+
+  field=name {
+    trait:labelField;
+  }
+
+  zNone => *;
+  zLeft => name => prefix => description;
+}

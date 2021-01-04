@@ -1,0 +1,31 @@
+<div class="fd-table-responsive-wrapper">
+  <table fd-table>
+    <thead fd-table-header>
+    <tr fd-table-row>
+      <th fd-table-cell>Id</th>
+      <th fd-table-cell>Name</th>
+      <th fd-table-cell>Due on</th>
+      <th fd-table-cell>Status</th>
+    </tr>
+    </thead>
+    <tbody fd-table-body>
+    <tr fd-table-row *ngFor="let row of tableRows">
+      <td fd-table-cell class="fd-has-font-weight-semi">
+        {{row.uniqueName}}
+      </td>
+      <td fd-table-cell class="fd-has-font-weight-semi">
+        <a routerLink="{{'/demo/tasks/view/' + row.uniqueName}}">
+          {{row.name}}
+        </a>
+
+      </td>
+      <td fd-table-cell class="fd-has-font-weight-semi">
+        {{row.dueDate | date:'shortDate'}}
+      </td>
+      <td fd-table-cell class="fd-has-font-weight-semi">
+        {{row.status }}
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

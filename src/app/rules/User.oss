@@ -1,0 +1,14 @@
+class=User {
+
+  field=uniqueName {
+    label:"Id";
+  }
+  field=fullName {
+    trait:labelField;
+  }
+
+  zLeft => uniqueName => fullName => organization => supervisor#withDetail;
+  zRight => email => phone;
+
+  zBottom => description;
+}

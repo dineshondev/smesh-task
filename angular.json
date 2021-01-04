@@ -3,21 +3,21 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "smesh-taks": {
+    "smesh-task": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
         }
       },
-      "root": "",
+      "root": "./",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/smesh-taks",
+            "outputPath": "dist/smesh-task",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,6 +28,10 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/flexboxgrid/dist/flexboxgrid.css",
+              "node_modules/fundamental-styles/dist/fundamental-styles.css",
+              "node_modules/fundamental-styles/dist/fonts.css",
+              "node_modules/fundamental-styles/dist/icon.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -65,18 +69,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "smesh-taks:build"
+            "browserTarget": "smesh-task:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "smesh-taks:build:production"
+              "browserTarget": "smesh-task:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "smesh-taks:build"
+            "browserTarget": "smesh-task:build"
           }
         },
         "test": {
@@ -113,16 +117,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "smesh-taks:serve"
+            "devServerTarget": "smesh-task:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "smesh-taks:serve:production"
+              "devServerTarget": "smesh-task:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "smesh-taks"
+  "defaultProject": "smesh-task"
 }
