@@ -1,6 +1,6 @@
 module {
   appTitle:"Smash";
-  appIcon:"/assets/logo.png";
+  appIcon:"./assets/logo.png";
 
 
   @actionCategory=Create {
